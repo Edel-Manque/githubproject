@@ -2,19 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins","sans-serif";
     text-decoration: none;
     border: none;
     outline: none;
     scroll-behavior: smooth;
 
 }
+
+
 :root{
-    --bg-color:#1C1C1C;
-    --second-bg-color:#DADDD8;
+    --bg-color: rgb(17, 17, 17);
+    --second-bg-color:#1C1C1C;
     --text-color:#34cfeb;
     --main-color:#FAFAFF;
 }
+
+
+
 
 html{
     font-size: 60%;
@@ -81,11 +86,12 @@ section{
     padding: 10rem 12% 10rem;
 }
 
-.home{
+.Home{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15rem;
+    background-color:  rgb(17, 17, 17);
 }
 
 .home-content{
@@ -168,7 +174,7 @@ color:var(--main-color);
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--text-color);
-    box-shadow: 0 0 25px var(--text-color);
+    
     border-radius: 4rem;
     font-size: 1.5rem;
     color:#FAFAFF ;
@@ -191,8 +197,8 @@ color:var(--main-color);
 }
 
 .btn-group a:nth-of-type(2){
-    background-color: var(--main-color);
-    color: var(--text-color);
+    background-color:#2A2D34;
+    color: var(--main-color);
     border: 2px solid var(--text-color);
     box-shadow: 0 0 25px transparent;
 }
@@ -298,16 +304,19 @@ color:var(--main-color);
     }
 
 }
+.About{
+    background:var(--second-bg-color);
+}
+.About .timeline-items h3{
 
-.About h2 {
-    font-size: 30px;
-    color: #FAFAFF;
+    color:var(--main-color);
 }
 
 .heading{
-    font-size: 8rem;
+   font-size: 30px;
     text-align: center;
     margin:5rem 0;
+    color: var(--main-color);
 }
 
 .education{
@@ -390,12 +399,17 @@ color:var(--main-color);
 .timeline-content:hover{
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--text-color);
+    background-color: var(--text-color);
+    border: 2px solid var(--main-color);
+  
+    
 }
+
 .timeline-content h3{
     font-size: 20px;
-    color: white;
     margin: 0 0 10px;
     font-weight: 500;
+    
 }
 ::-webkit-scrollbar{
     width: 15px;
@@ -409,4 +423,188 @@ background-color: var(--text-color);
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
     width: 50px;
+}
+
+.Projects{
+
+    background-color: rgb(17, 17, 17);
+}
+.Projects .container{
+    background: var(--bg-color);
+    color: black;
+}
+
+.Projects-h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.Projects-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+
+.Projects-box{
+    background-color:  #495159;
+    color:var(--main-color);
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid var(--second-bg-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 10px var(--text-color);
+   
+}
+
+.Projects-box:hover{
+    background-color:#F6F4F3;
+    border: 5px solid var(--text-color);
+    transform: scale(1.03);
+    color:#50535a;
+}
+.Projects-box .Projects-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5rem;
+   
+}
+
+.Projects-box .Projects-info p{
+font-size: 13px;
+
+
+}
+.Projects-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 2rem;
+   
+}
+
+.Contact{
+    background-color: var(--second-bg-color);
+
+}
+
+.Contact h2{
+    margin-bottom: 3rem;
+    color:#FAFAFF;
+}
+.Contact h2 span{
+    margin-bottom: 3rem;
+    color:var(--text-color);
+}
+.Contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.Contact form .input-box {
+ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Contact form .input-box input,
+.Contact form textarea
+{
+    
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    background:#FAFAFF;
+    border-radius: 2rem;
+    border: 2px solid var(--text-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.Contact form .btn{
+    margin-top: 2rem;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 4px 0;
+    background-color:#181818;
+  
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--text-color);
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+    margin-top: 40px;
+}
+
+.footer .social a:hover{
+    color: var(--main-color);
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--text-color);
+    background-color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    
+    color: var(--text-color);
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+    border-bottom: 2px solid var(--text-color);
+    color: #FAFAFF;
+    transition: 0.6s ease-in-out;
+}
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright{
+    margin-top:50px;
+    text-align: center;
+    font-size: 15px;
+    color: #FAFAFF;
+    margin-bottom: 10px;
 }
